@@ -203,4 +203,21 @@ public class BinarySearchTree {
         }
         return null;
     }
+    public int sumRightSons(){
+        //the function sums the amount of right sons in the tree in O(n) complexity
+        return sumRightSons(root);
+    }
+    private int sumRightSons(Node root){
+        if(root==null)
+            return 0;
+        if(root.right==null&&root.left==null)
+            return 0;
+        if(root.right==null&&root.left!=null)
+            return sumRightSons(root.left);
+        if(root.right!=null&&root.left==null)
+            return sumRightSons(root.right)+1;
+        if(root.right!=null&&root.left!=null)
+            return sumRightSons(root.right)+sumRightSons(root.left)+1;
+        return 0;
+    }
 }
