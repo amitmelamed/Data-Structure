@@ -48,6 +48,7 @@ public class SortingAlgoritems {
 
     //merge sort algoritem
     //complexity θ(n*Log n)
+    
     public static void mergeSort(int [] arr){
         mergeSort(arr,0,arr.length-1);
     }
@@ -82,14 +83,11 @@ public class SortingAlgoritems {
             }
             k++;
         }
-
-
         while (i < lengthA) {
             arr[k] = arr1[i];
             i++;
             k++;
         }
-
         while (j < lengthB) {
             arr[k] = arr2[j];
             j++;
@@ -177,5 +175,4 @@ public class SortingAlgoritems {
         }
         return true;
     }
-
 }
